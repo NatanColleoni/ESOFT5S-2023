@@ -15,6 +15,18 @@ class ProductController {
         return res.status(200).json(product)
     }
 
+    async writeFile(req: Request, res: Response) {
+        const product = await new ProductService().productsWriteFile()
+
+        return res.status(200).json(product)
+    }
+
+    async readFile(req: Request, res: Response) {
+        const product = await new ProductService().productsReadFile()
+
+        return res.status(200).json(product)
+    }
+
     // async find(req: Request, res: Response) {
     //     const user = await new ProductService().find(req.params.id)
 

@@ -14,7 +14,11 @@ routes.put('/users/:id', userController.update)
 routes.delete('/users/:id', userController.delete)
 routes.post('/products', productController.create)
 routes.get('/products/list', productController.list)
-routes.get('/products-stock', stockController.stock)
+routes.get('/products/writefile', productController.writeFile)
+routes.get('/products/readfile', productController.readFile)
+routes.get('/products/stock', stockController.stock)
+routes.get('/products/stock/random', stockController.getStockRandom)
+routes.get('/products/stock/total', stockController.getStockTotalValue)
 
 
 // 17 - Estamos exportando a constante routes

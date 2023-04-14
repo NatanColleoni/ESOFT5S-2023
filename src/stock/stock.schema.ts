@@ -2,20 +2,20 @@ import {model, Schema} from 'mongoose'
 
 const StockSchema = new Schema({
     name: {
-        require: true,
         type: String,
+        required: true,
     },
     quantity: {
-        require: true,
-        type: Number
+        type: Number,
+        required: true,
     },
     price: {
-        require: true,
-        type: Number
+        type: Number,
+        required: true,
     },
     stockValue: {
-        require :true,
-        type: Number
+        type: Number,
+        required: true,
     }
 }, {
     timestamps: true
